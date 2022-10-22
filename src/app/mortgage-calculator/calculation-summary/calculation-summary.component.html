@@ -1,0 +1,19 @@
+<header class="center bold">Calculation Summary</header>
+<div class="col col-12 mr2 py-3">
+  <table class="table table-striped border">
+    <thead>
+    <tr>
+      <th scope="col">Category</th>
+      <th scope="col">Term</th>
+      <th scope="col">Amortization Period</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let value of tableValues">
+      <td>{{value.category}}</td>
+      <td>{{(value.category === 'Number of Payments') ? (value.term) : (value.term | currency)}} </td>
+      <td>{{(value.category === 'Number of Payments') ? (value.amortizationPeriod) : (value.amortizationPeriod | currency)}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

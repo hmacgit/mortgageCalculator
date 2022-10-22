@@ -1,0 +1,106 @@
+<form [formGroup]="form">
+  <div class="col col-11 border">
+  <header class="panel-heading center">Payment Plan</header>
+
+  <div class="col col-11 mt-1 mb-3 ml3">
+    <div class="col col-5">
+      <label>Mortgage Amount:</label>
+    </div>
+    <div class="col col-6">
+      <div class="input-group">
+        <span class="input-group-text">$</span>
+        <input
+          [formControlName]="constantControl.MORTGAGE_AMOUNT"
+          appDecimal
+          type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-11 mt-1 mb-3 ml3">
+    <div class="col col-5">
+      <label>Interest Rate:</label>
+    </div>
+    <div class="col col-6">
+      <div class="input-group">
+        <input
+          [formControlName]="constantControl.INTEREST_RATE"
+          appDecimal
+          type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-11 mt-1 mb-3 ml3">
+    <div class="col col-5">
+      <label>Amortization Period:</label>
+    </div>
+    <div class="col col-3">
+      <div class="input-group mb-3">
+        <select
+          [formControlName]="constantControl.AMORTIZATION_PERIOD_YEARS"
+          class="form-select">
+          <option *ngFor="let year of amortizationYears"
+            [ngValue]="year">
+            {{year}}
+          </option>
+        </select>
+        <span class="input-group-text">Years</span>
+      </div>
+    </div>
+    <div class="col col-3">
+      <div class="input-group mb-3 ml1">
+        <select
+          [formControlName]="constantControl.AMORTIZATION_PERIOD_MONTHS"
+          class="form-select">
+          <option *ngFor="let month of amortizationMonths"
+                  [ngValue]="month">
+            {{month}}
+          </option>
+        </select>
+        <span class="input-group-text">Months</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col col-11 mt-1 mb-3 ml3">
+    <div class="col col-5">
+      <label>Payment Frequency:</label>
+    </div>
+    <div class="col col-6">
+      <div class="input-group">
+        <select
+          [formControlName]="constantControl.AMORTIZATION_PERIOD_YEARS"
+          class="form-select">
+          <option *ngFor="let frequency of paymentFrequency"
+                  [ngValue]="frequency">
+            {{frequency.value}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-11 mt-1 mb-3 ml3">
+    <div class="col col-5">
+      <label>Term:</label>
+    </div>
+    <div class="col col-6">
+      <div class="input-group mb-3">
+        <select
+          [formControlName]="constantControl.TERM"
+          class="form-select">
+          <option *ngFor="let term of termsYears"
+                  [ngValue]="term">
+            {{term}}
+          </option>
+        </select>
+        <span class="input-group-text">Years</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</form>

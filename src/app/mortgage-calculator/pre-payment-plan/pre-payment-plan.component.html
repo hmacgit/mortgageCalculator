@@ -1,0 +1,51 @@
+<form [formGroup]="form">
+  <div class="col col-11 border">
+  <header class="panel-heading center">PrePayment Plan</header>
+
+  <div class="col col-11 mt-1 mb-3 ml3">
+    <div class="col col-5">
+      <label>Prepayment Amount:</label>
+    </div>
+    <div class="col col-6">
+      <div class="input-group">
+        <span class="input-group-text">$</span>
+        <input
+          [formControlName]="constantControl.PRE_PAYMENT_AMOUNT"
+          appDecimal
+          type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-11 mt-1 mb-3 ml3">
+    <div class="col col-5">
+      <label>Payment Frequency:</label>
+    </div>
+    <div class="col col-6">
+      <div class="input-group">
+        <select
+          [formControlName]="constantControl.PAYMENT_FREQUENCY"
+          class="form-select">
+          <option *ngFor="let frequency of prepaymentAmount"
+                  [ngValue]="frequency">
+            {{frequency.value}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-11 mt-1 mb-3 ml3">
+    <div class="col col-5">
+      <label>Start With Payment:</label>
+    </div>
+    <div class="col col-6">
+      <div class="input-group">
+        <input
+          [formControlName]="constantControl.START_WITH_PAYMENT"
+          type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+</div>
+</form>

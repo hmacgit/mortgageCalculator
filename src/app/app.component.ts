@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {FormGroup} from "@angular/forms";
+import {MortgageCalculatorFormService} from "./mortgage-calculator/mortgage-calculator-form.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mortgageCalculator';
+
+  ngOnInit(): void {
+  }
+
+
 }

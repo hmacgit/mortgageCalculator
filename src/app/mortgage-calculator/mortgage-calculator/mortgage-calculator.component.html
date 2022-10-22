@@ -1,0 +1,30 @@
+<form [formGroup]="form" >
+    <div class="clearfix mxn2 mb1 mt1">
+      <div class="col col-12">
+        <div class="col col-5 ml4">
+          <app-payment-plan
+          [form]="form">
+          </app-payment-plan>
+        </div>
+        <div class="col col-5">
+          <app-pre-payment-plan
+            [form]="form">
+          </app-pre-payment-plan>
+        </div>
+      </div>
+    </div>
+  <div class="clearfix flex py-2">
+    <div class="col col-5 ml4">
+      <button
+        (click)="submit()"
+        type="button" class="btn btn-primary">
+        Calculate
+      </button>
+    </div>
+  </div>
+  <div class="clearfix flex py-3">
+    <div class="col col-12 px2">
+      <app-calculation-summary></app-calculation-summary>
+    </div>
+  </div>
+</form>
