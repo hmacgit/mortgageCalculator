@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTableModule } from '@angular/material/table';
 import { DecimalDirective } from './directive/decimal.directive';
+import { NgChartsModule } from "ng2-charts";
+import { PaymentHistoryComponent } from './mortgage-calculator/payment-history/payment-history.component';
+import { InterestPaymentComponent } from './mortgage-calculator/interest-payment/interest-payment.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,17 @@ import { DecimalDirective } from './directive/decimal.directive';
     CalculationSummaryComponent,
     MortgageSummaryComponent,
     MortgageCalculatorComponent,
-    DecimalDirective
+    DecimalDirective,
+    PaymentHistoryComponent,
+    InterestPaymentComponent
   ],
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        MatTableModule
-    ],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    NgChartsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

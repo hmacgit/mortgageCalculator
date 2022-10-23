@@ -12,9 +12,19 @@ export class DecimalDirective implements AfterViewInit{
   constructor(private el: ElementRef) {
   }
 
-  ngAfterViewInit() {
+
+  setElementValue() {
     const digit = parseFloat(this.el.nativeElement.value);
     this.el.nativeElement.value = digit.toFixed(this.decimalPoints);
+  }
+
+  ngAfterViewInit() {
+    this.setElementValue();
+  }
+
+  @HostListener('blur', ['$event.target.value'])
+  onBlur() {
+    this.setElementValue();
   }
 
   @HostListener('keydown', ['$event'])
@@ -30,5 +40,7 @@ export class DecimalDirective implements AfterViewInit{
       event.preventDefault();
     }
   }
+
+
 
 }
