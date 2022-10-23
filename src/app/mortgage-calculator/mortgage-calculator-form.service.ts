@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder } from "@angular/forms";
-import { MortgageCalculatorConstants } from "./mortgage-calculator.constants";
-import {ICalculationSummaryTable, IMortgageCalculator} from "./mortgage-calculator.interface";
+import { IMortgageCalculator } from "./mortgage-calculator.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +24,5 @@ export class MortgageCalculatorFormService {
       startWithPayment: [mortgageCalculator.startWithPayment]
     })
   }
-
 
 }

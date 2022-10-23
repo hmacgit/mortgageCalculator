@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ControlContainer, FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {FormGroup} from "@angular/forms";
 import {MortgageCalculatorConstants} from "../mortgage-calculator.constants";
 
 @Component({
@@ -16,8 +16,7 @@ export class PaymentPlanComponent implements OnInit {
   termsYears: Array<number> = [];
   paymentFrequency = MortgageCalculatorConstants.paymentFrequency;
 
-  constructor(private controlContainer: ControlContainer) {
-    this.form = <FormGroup>this.controlContainer.control;
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -30,9 +29,6 @@ export class PaymentPlanComponent implements OnInit {
     for(let i = 1; i < 11; i++) {
       this.termsYears?.push(i);
     }
-
-
-
   }
 
 }

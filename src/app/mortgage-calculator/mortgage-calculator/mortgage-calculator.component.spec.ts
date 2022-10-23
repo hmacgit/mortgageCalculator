@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MortgageCalculatorComponent } from './mortgage-calculator.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 describe('MortgageCalculatorComponent', () => {
   let component: MortgageCalculatorComponent;
@@ -8,6 +9,7 @@ describe('MortgageCalculatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ ReactiveFormsModule ],
       declarations: [ MortgageCalculatorComponent ]
     })
     .compileComponents();

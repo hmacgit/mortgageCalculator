@@ -26,7 +26,6 @@ export class MortgageCalculatorConstants {
       {id: 3, value: 'Same as Regular Payment'}
     ]
 
-
 }
 
 

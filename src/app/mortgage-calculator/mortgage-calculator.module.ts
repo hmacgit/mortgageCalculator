@@ -10,10 +10,8 @@ import {PaymentHistoryComponent} from "./payment-history/payment-history.compone
 import {InterestPaymentComponent} from "./interest-payment/interest-payment.component";
 import {MatTableModule} from "@angular/material/table";
 import {NgChartsModule} from "ng2-charts";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MortgageRouting} from "./mortgage.routing";
-
-
 
 @NgModule({
   declarations: [
@@ -24,12 +22,13 @@ import {MortgageRouting} from "./mortgage.routing";
     MortgageCalculatorComponent,
     DecimalDirective,
     PaymentHistoryComponent,
-    InterestPaymentComponent
+    InterestPaymentComponent,
   ],
   imports: [
     CommonModule,
     MortgageRouting,
     ReactiveFormsModule,
+    FormsModule,
     MatTableModule,
     NgChartsModule
   ]

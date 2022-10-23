@@ -18,27 +18,8 @@ export class CalculationSummaryComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.mortgageCalculatorDataService.getPaymentPlan().subscribe((data) =>
-    {
-
-      console.log(data);
-      return this.tableValues = data;
-
-    }
+      this.tableValues = data
     );
-    /*
-    this.tableValues = [
-      {
-        category: 'Number of Payments',
-        term: 60,
-        AmoritizationPeriod: 300,
-      },
-      {
-        category: 'Number of Payments',
-        term: 60,
-        AmoritizationPeriod: 300,
-      }
-    ]
-*/
   }
 
   ngOnDestroy() {
