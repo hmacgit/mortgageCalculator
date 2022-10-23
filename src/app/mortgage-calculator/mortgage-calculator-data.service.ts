@@ -8,14 +8,8 @@ import {Subject} from "rxjs";
 export class MortgageCalculatorDataService {
 
   private subject = new Subject<any>()
-  paymentPlan: Array<ICalculationSummaryTable> = [];
 
   constructor() { }
-
-
-  addPaymentPlan(paymentPlan: any) {
-    this.paymentPlan.push(paymentPlan);
-  }
 
   sendPaymentPlan(paymentPlan: Array<ICalculationSummaryTable>) {
     this.subject.next(paymentPlan);
@@ -24,6 +18,5 @@ export class MortgageCalculatorDataService {
   getPaymentPlan() {
     return this.subject.asObservable();
   }
-
 
 }

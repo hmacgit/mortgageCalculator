@@ -8,6 +8,11 @@ import {ChartOptions, ChartType} from "chart.js";
 })
 export class PaymentHistoryComponent implements OnInit {
 
+  /*
+  * https://www.positronx.io/angular-chart-js-tutorial-with-ng2-charts-examples/
+  * mock data place holder to enter actual data later.
+  * */
+
   constructor() { }
 
   ngOnInit(): void {

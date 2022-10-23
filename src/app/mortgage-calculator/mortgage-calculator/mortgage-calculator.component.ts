@@ -49,15 +49,11 @@ export class MortgageCalculatorComponent implements OnInit {
       this.form.value?.interestRate/100 /
       MortgageCalculatorConstants.monthsInYears);
 
-
-
     paymentPlan.push({
       category: 'Number of Payments',
       term: term,
       amortizationPeriod: amortizationPeriod
     });
-
-
     paymentPlan.push({
       category: 'Mortgage Payment',
       term: this.form.value?.mortgageAmount ? this.form.value?.mortgageAmount : 0,
@@ -78,19 +74,13 @@ export class MortgageCalculatorComponent implements OnInit {
       term: this.form.value?.mortgageAmount * term,
       amortizationPeriod: this.form.value?.mortgageAmount * amortizationPeriod
     });
-
     paymentPlan.push({
       category: 'Total Cost',
       term: this.form.value?.mortgageAmount ? this.form.value?.mortgageAmount : 0,
       amortizationPeriod: this.form.value?.mortgageAmount ? this.form.value?.mortgageAmount : 0
     });
 
-   /*
-    console.log((this.form.value?.amortizationPeriodYears + this.form.value?.amortizationPeriodMonths)
-      * MortgageCalculatorConstants.monthsInYears);
-   */
     this.mortgageCalculatorDataService.sendPaymentPlan(paymentPlan);
-
   }
 
 }

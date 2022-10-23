@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Color} from "chart.js";
 
 @Component({
   selector: 'app-interest-payment',
@@ -7,6 +6,11 @@ import {Color} from "chart.js";
   styleUrls: ['./interest-payment.component.css']
 })
 export class InterestPaymentComponent implements OnInit {
+
+  /*
+  * https://www.positronx.io/angular-chart-js-tutorial-with-ng2-charts-examples/
+  * mock data place holder to enter actual data later.
+  * */
 
   constructor() { }
 
