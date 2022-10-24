@@ -1,3 +1,7 @@
+# Author
+Hung Mac 
+Oct 23, 2022
+
 # MortgageCalculator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
